@@ -1,0 +1,16 @@
+//Blinking_LED
+//turn on the LED for half a second,then off for half a second,repeatedly
+void setup()
+{
+pinMode(9,OUTPUT);//initialize the digital pin as an output
+}
+
+void loop()
+{
+digitalWrite(ledPin,HIGH);//turn the LED on
+delay(500);               //wait for half a second
+
+digitalWrite(ledPin,LOW); //turn the LED off
+
+delay(500);               //wait for half a second
+}
