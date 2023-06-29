@@ -7,10 +7,10 @@ pinMode(9,OUTPUT);//initialize the digital pin as an output
 
 void loop()
 {
-digitalWrite(ledPin,HIGH);//turn the LED on
+digitalWrite(9,HIGH);//turn the LED on
 delay(500);               //wait for half a second
 
-digitalWrite(ledPin,LOW); //turn the LED off
+digitalWrite(9,LOW); //turn the LED off
 
 delay(500);               //wait for half a second
 }
