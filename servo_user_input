@@ -1,0 +1,30 @@
+// Include the servo library:
+#include <Servo.h>
+
+// Create a new servo object:
+Servo myservo;
+
+// Define the servo pin:
+#define servoPin 9
+
+// Create a variable to store the servo position:
+int angle;
+
+void setup() {
+  // Attach the Servo variable to a pin:
+  Serial.begin(9600);
+  myservo.attach(servoPin);
+}
+
+void loop() {
+  // Tell the servo to go to a particular angle:
+  Serial.println("What angle for Servo?");
+  
+  // while there is nothing on the serial monitor.  It waits
+  while (Serial.available()==0){
+  }
+  angle = Serial.parseInt();
+ 
+  myservo.write(angle);
+ 
+}
