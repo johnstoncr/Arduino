@@ -1,0 +1,37 @@
+/*
+ If voltage is 4 or above turn the LED (warning light on)
+ If voltage is below 4 then the LED is off
+*/
+  int myPin = A0;
+  int readVal;
+  float V2;
+  int dt = 250;
+  int redPin = 8;
+// the setup routine runs once when you press reset:
+void setup() {
+
+
+  
+  // initialize serial communication at 9600 bits per second:
+  Serial.begin(9600);
+  pinMode(myPin,INPUT);
+  pinMode(redPin,OUTPUT);
+
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+  readVal = analogRead(myPin);
+  V2 = (5.0/1023.0)*readVal;  //convert to voltage
+  Serial.print("Voltage is ");
+  Serial.println(V2);
+  if(V2 >= 4) {
+    digitalWrite(redPin, HIGH);
+    }
+    if(V2 < 4) {
+    digitalWrite(redPin, LOW);
+    }  
+     
+  delay(dt);
+
+}
