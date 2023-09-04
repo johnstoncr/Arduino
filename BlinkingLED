@@ -2,15 +2,15 @@
 //turn on the LED for half a second,then off for half a second,repeatedly
 void setup()
 {
-pinMode(9,OUTPUT);//initialize the digital pin as an output
+pinMode(13,OUTPUT);//initialize the digital pin as an output
 }
 
 void loop()
 {
-digitalWrite(9,HIGH);//turn the LED on
+digitalWrite(13,HIGH);//turn the LED on
 delay(500);               //wait for half a second
 
-digitalWrite(9,LOW); //turn the LED off
+digitalWrite(13,LOW); //turn the LED off
 
 delay(500);               //wait for half a second
 }
